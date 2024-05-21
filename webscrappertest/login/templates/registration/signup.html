@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="login-wrap">
+    <div class="form-wrap">
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+    <a href="{% url 'login:login' %}">Already have an account? Log In</a>
+</div>
+{% endblock content %}

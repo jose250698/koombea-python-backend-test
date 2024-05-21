@@ -1,0 +1,17 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="login-wrap">
+
+    <div class="form-wrap">
+    <h3>WebScrapping APP</h3>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
+    </div>
+    <a href="{% url 'login:signup' %}">Don't have an account? Sign up</a>
+</div>
+
+{% endblock content %}
